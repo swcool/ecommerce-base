@@ -1,0 +1,146 @@
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-15 15:10:18 -0700
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES ('2011-05-15 22:10:19.202404', '2011-05-15 22:10:19.202404')[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "line_items" WHERE ("line_items".cart_id = 30)
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.3ms)
+Rendered store/index.html.erb within layouts/application (202.5ms)
+Completed 200 OK in 314ms (Views: 224.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/javascripts/effects.js" for 127.0.0.1 at 2011-05-15 15:10:19 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/javascripts/dragdrop.js" for 127.0.0.1 at 2011-05-15 15:10:19 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/javascripts/prototype.js" for 127.0.0.1 at 2011-05-15 15:10:19 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/controls.js" for 127.0.0.1 at 2011-05-15 15:10:19 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-15 15:10:34 -0700
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE ("carts"."id" = 30) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "line_items" WHERE ("line_items".cart_id = 30)[0m
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.4ms)
+Rendered store/index.html.erb within layouts/application (80.1ms)
+Completed 200 OK in 111ms (Views: 85.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/javascripts/prototype.js" for 127.0.0.1 at 2011-05-15 15:10:35 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/javascripts/controls.js" for 127.0.0.1 at 2011-05-15 15:10:35 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/effects.js" for 127.0.0.1 at 2011-05-15 15:10:35 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/dragdrop.js" for 127.0.0.1 at 2011-05-15 15:10:35 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started POST "/en/line_items?product_id=3" for 127.0.0.1 at 2011-05-15 15:10:42 -0700
+  Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"ENxb0OYSn9EgETvOQ1mdy2urCTlzz0FuaxiBctlgaFE=", "product_id"=>"3", "locale"=>"en"}
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE ("carts"."id" = 30) LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE ("products"."id" = 3) ORDER BY title LIMIT 1[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE ("line_items".cart_id = 30) AND ("line_items"."product_id" = 3) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "quantity", "order_id") VALUES (3, 30, '2011-05-15 22:10:42.384216', '2011-05-15 22:10:42.384216', 1, NULL)[0m
+Redirected to http://localhost:3000/en
+Completed 302 Found in 122ms
+
+
+Started GET "/en" for 127.0.0.1 at 2011-05-15 15:10:42 -0700
+  Processing by StoreController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE ("carts"."id" = 30) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "line_items" WHERE ("line_items".cart_id = 30)
+  [1m[36mLineItem Load (0.5ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE ("line_items".cart_id = 30)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE ("products"."id" = 3) ORDER BY title LIMIT 1
+Rendered line_items/_line_item.html.erb (49.1ms)
+Rendered carts/_cart.html.erb (59.2ms)
+Rendered store/index.html.erb within layouts/application (100.4ms)
+Completed 200 OK in 170ms (Views: 105.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/javascripts/effects.js" for 127.0.0.1 at 2011-05-15 15:10:42 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/prototype.js" for 127.0.0.1 at 2011-05-15 15:10:42 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/javascripts/dragdrop.js" for 127.0.0.1 at 2011-05-15 15:10:42 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/javascripts/controls.js" for 127.0.0.1 at 2011-05-15 15:10:42 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /Users/shane_weng/.rvm/gems/ruby-1.9.2-p180@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)

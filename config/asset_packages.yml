@@ -1,0 +1,13 @@
+--- 
+javascripts: 
+- base: 
+  - rails
+  - prototype
+  - effects
+  - dragdrop
+  - controls
+  - application
+stylesheets: 
+- base: 
+  - ecommerce_base
+  - scaffold

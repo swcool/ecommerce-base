@@ -21,7 +21,12 @@ scope '(:locale)' do
   resources :products do
     get :who_bought, :on => :member
   end
+  
   root :to => 'store#index', :as => 'store'
+  match '/faq', :to => 'store#faq'
+  match '/news', :to => 'store#news'
+  match '/contact', :to => 'store#contact'
+  
 end
   # The priority is based upon order of creation:
   # first created -> highest priority.

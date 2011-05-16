@@ -45,3 +45,6 @@ Product.create(:title => 'Rails Test Prescriptions',
       </p>},
   :image_url => '/images/rtp.jpg',
   :price => 43.75)
+  
+  User.delete_all
+  User.create(:name => 'admin123', :password => 'admin123', :password_confirmation => 'admin123')
